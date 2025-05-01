@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virus Alert!</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .popup {
+      background-color: white;
+      color: red;
+      border: 5px solid red;
+      padding: 30px;
+      width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px red;
+      animation: shake 0.3s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px); }
+      25% { transform: translate(-1px, -2px); }
+      50% { transform: translate(-3px, 1px); }
+      75% { transform: translate(3px, 1px); }
+      100% { transform: translate(1px, -1px); }
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup" id="alertBox">
+    <h2>⚠️ WARNING: VIRUS DETECTED!</h2>
+    <p>Your system has been infected with 5 viruses!</p>
+    <p>Immediate action required!</p>
+    <p>HAHAHAHA</p>
+    <button onclick="showMoreAlerts()">OK</button>
+  </div>
+
+
+  <script>
+    function showMoreAlerts() {
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          alert("🔥 ALERT: Virus spreading! Contact support immediately!");
+        }, i * 1000);
+      }
+    }
+  </script>
+</body>
+</html>
